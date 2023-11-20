@@ -31,6 +31,16 @@
 
 
     <build>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <!--   <version>3.4.0</version>   Use your actual version -->
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+        </plugin>
+
+        
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
