@@ -6,7 +6,7 @@
     <groupId>br.io.bruno.hellospringboot</groupId>
     <artifactId>hellospringboot</artifactId>
     <version>0.1.0</version>
-
+    <name>test</name>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
