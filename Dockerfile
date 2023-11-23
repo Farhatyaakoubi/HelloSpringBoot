@@ -1,4 +1,4 @@
-FROM centos
+FROM alpine
 
 MAINTAINER hello@gritfy.com
 
