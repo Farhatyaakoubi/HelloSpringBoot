@@ -55,4 +55,10 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>your-nexus-repository-id</id>
+            <url>http://192.168.31.107:8081/repository/test/</url>
+        </repository>
+    </distributionManagement>
 </project>
