@@ -7,20 +7,27 @@
     <artifactId>hellospringboot</artifactId>
     <version>0.1.0</version>
     <name>test</name>
+    <description>Your project description</description>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
+        <version>2.6.1</version> <!-- Use a newer version of Spring Boot -->
     </parent>
 
-    <packaging>war</packaging> <!-- Change packaging to "war" -->
+    <packaging>war</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
     <dependencies>
+        <!-- Your dependencies remain unchanged -->
         <dependency>
-    <groupId>org.owasp</groupId>
-    <artifactId>dependency-check-maven</artifactId>
-    <version>8.4.3</version>
-</dependency>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>8.4.3</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -32,25 +39,24 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <build>
         <plugins>
-                <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-deploy-plugin</artifactId>
-            <version>2.8.2</version>
-            <configuration>
-                <!-- The ID of the repository defined in the distribution management section -->
-                <altDeploymentRepository>your-nexus-repository-id::default::192.168.0.151:8081/repository/test/</altDeploymentRepository>
-            </configuration>
-        </plugin>
+            <!-- Maven Deploy Plugin for deploying to Nexus -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <!-- The ID of the repository defined in the distribution management section -->
+                    <altDeploymentRepository>your-nexus-repository-id::default::http://192.168.31.107:8081/repository/test/</altDeploymentRepository>
+                </configuration>
+            </plugin>
+            <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!-- Maven War Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -61,4 +67,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- Add distributionManagement for Nexus -->
+    <distributionManagement>
+        <repository>
+            <id>your-nexus-repository-id</id>
+            <url>http://192.168.31.107:8081/repository/test/</url>
+        </repository>
+    </distributionManagement>
 </project>
