@@ -62,4 +62,20 @@
         </plugins>
     </build>
 
+    <repositories>
+    <repository>
+        <id>test-repo</id>
+        <url>http://192.168.31.107:8081/repository/test/</url>
+    </repository>
+</repositories>
+    <servers>
+    <server>
+        <id>test-repo</id>
+        <username>admin</username>
+        <password>admin</password>
+    </server>
+</servers>
+
+
+
 </project>
