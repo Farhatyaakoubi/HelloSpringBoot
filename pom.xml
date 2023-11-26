@@ -52,18 +52,7 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-            </plugin>
-
-
- <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>0.1.0</version>
-                <configuration>
-                    <altDeploymentRepository>nexus-snapshots::default::http://192.168.1.142:8081/repository/test/repository/maven-snapshots/</altDeploymentRepository>
-                </configuration>
-            </plugin>
-            
+            </plugin>            
         </plugins>
     </build>
 
