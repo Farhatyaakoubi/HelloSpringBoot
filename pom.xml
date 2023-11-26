@@ -38,11 +38,7 @@
                 <version>2.8.2</version>
                 <configuration>
                     <url>http://192.168.1.142:8081/repository/test</url>
-                <properties>
-    <name>admin</name>
-    <password>admin</password>
-</properties>
-
+               
                 </configuration>
             </plugin>
             <plugin>
@@ -65,10 +61,7 @@
         <repository>
             <id>nexus-snapshots</id>
             <url>http://192.168.1.142:8081/repository/test/repository/maven-snapshots/</url>
-           <properties>
-    <name>admin</name>
-    <password>admin</password>
-</properties>
+           
 
         </repository>
     </distributionManagement>
