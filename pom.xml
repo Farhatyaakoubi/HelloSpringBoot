@@ -13,15 +13,6 @@
         <version>1.4.0.RELEASE</version>
     </parent>
 
-        <servers>
-    <server>
-        <id>test</id>
-        <username>admin</username>
-        <password>admin</password>
-    </server>
-</servers>
-
-
     <packaging>war</packaging> 
      <dependencies>
         <dependency>
