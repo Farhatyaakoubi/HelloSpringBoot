@@ -71,9 +71,5 @@
             <id>nexus-releases</id>
             <url>http://192.168.1.142:8081/repository/test/repository/maven-releases/</url>
         </repository>
-        <repository>
-            <id>nexus-snapshots</id>
-            <url>https://http://192.168.1.142:8081/repository/test/repository/maven-snapshots/</url>
-        </repository>
     </repositories>
 </project>
