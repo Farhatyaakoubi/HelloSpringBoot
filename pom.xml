@@ -53,12 +53,39 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+
+
+ <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <altDeploymentRepository>nexus-snapshots::default::http://localhost:8081/repository/test/repository/maven-snapshots/</altDeploymentRepository>
+                </configuration>
+            </plugin>
+            
         </plugins>
     </build>
+
     <distributionManagement>
+        <!-- Configure deployment to Nexus -->
         <repository>
-            <id>your-nexus-repository-id</id>
-            <url>http://192.168.31.107:8081/repository/test/</url>
+            <id>nexus-releases</id>
+            <url>http://localhost:8081/repository/test/repository/maven-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://localhost:8081/repository/test/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
+<repositories>
+  <repository>
+            <id>nexus-releases</id>
+            <url>http://localhost:8081/repository/test/repository/maven-releases/</url>
+        </repository>
+        <repository>
+            <id>nexus-snapshots</id>
+            <url>https://http://localhost:8081/repository/test/repository/maven-snapshots/</url>
+        </repository>
+    </repositories>
 </project>
