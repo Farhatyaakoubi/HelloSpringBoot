@@ -37,7 +37,7 @@
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
                 <configuration>
-                    <url>http://192.168.1.142:8081/repository/test</url>
+                    <url>http://172.17.0.1:8081/repository/test</url>
                
                 </configuration>
             </plugin>
@@ -60,7 +60,7 @@
         <!-- Configure deployment to Nexus -->
         <repository>
             <id>nexus-</id>
-            <url>http://192.168.1.142:8081/repository/test/repository/maven/</url>
+            <url>http://172.17.0.1:8081/repository/test/repository/maven/</url>
            
 
         </repository>
